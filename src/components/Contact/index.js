@@ -20,7 +20,7 @@ const Contact = () => {
     e.preventDefault()
 
     emailjs
-      .sendForm('service_cit73ed', 'template_bhi2892', form.current, 'VVVZ2i_OZw7R19mi2')
+      .sendForm(process.env.REACT_APP_EMAILJS_SERVICE_ID, process.env.REACT_APP_EMAILJS_TEMPLATE_ID, form.current, process.env.REACT_APP_EMAILJS_USER_ID)
       .then(
         () => {
           alert('Message successfully sent!')
